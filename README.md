@@ -1,6 +1,6 @@
 # EX01 Developing a Simple Webserver
 
-# Date: 21/11/2026
+# Date: 23/11/2026
 # AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
 
@@ -23,46 +23,39 @@ Testing the webserver.
 ## PROGRAM:
 ```
 from http.server import HTTPServer,BaseHTTPRequestHandler
-content='''<html>
+content='''
+<html>
     <head>
         <title>Laptop Specifications</title>
         <style>
-            body {
+            body{
+                background-color:darkslateblue;
+                font-family: monospace;
+            }
+            h1
+            {
+                text-align:center;
+                font-size:40px;
+                color: white;
+            }
+            table
+            {
+                width:700px;
+                margin:auto;
                 background-color: #1e1e1e;
-                font-family: Arial, sans-serif;
+                border: 5px solid cyan;
+                border-collapse:collapse;
+                border-radius:12px;
             }
-            h1 {
+            th,td
+            {
+                color: white;
+                font-size:20px;
+                padding:20px;
                 text-align: left;
-                color: #98edfa;
-                font-weight: normal;
-            }
-            table {
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                max-width: 700px;
-                background-color: #1e1e1e;
-                border: 3px solid #13f0f0;
-                border-radius: 12px;
-                border-collapse: seperate;          
-            }
-            th, td {
-                padding: 12px;
-                text-align: left;
-                border-bottom: 1px solid;
-            }
-            th {
-                color: #10cccc;
-                font-weight: normal;
-                width: 35%;
-            }
-            td {
-                color:#98edfa  ;
-            }
-            tr:last-child th,
-            tr:last-child td {
-                border-bottom: none;
-            }
+                background-color: darkblue;
+                border:3px solid cyan;
+            }   
         </style>
     </head>
     <body>
@@ -121,8 +114,8 @@ httpd=HTTPServer(server_address,MyServer)
 httpd.serve_forever()
 ```
 ## OUTPUT:
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/817d6e3d-2731-4903-847b-7142937cf26b" />
-<img width="1090" height="209" alt="image" src="https://github.com/user-attachments/assets/59b53b2e-3a91-4b00-b7b4-8e1ce992b192" />
+<img src="Laptop_Specifications_Output.png" />
+<img src="Output" />
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
