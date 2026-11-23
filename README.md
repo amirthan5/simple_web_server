@@ -115,7 +115,7 @@ httpd.serve_forever()
 ```
 ## OUTPUT:
 <img src="Laptop_Specifications_Output.png" />
-<img src="Output" />
+<img src="Output.png" />
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
